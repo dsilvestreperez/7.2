@@ -1,0 +1,58 @@
+Console.WriteLine("Hello, World!");
+
+
+class Shape // base(parent)
+{
+
+    public virtual void calculateArea()
+    {
+        Console.WriteLine("shape equations");
+    }
+
+}
+
+class Circle : Shape // cicle equation
+{
+    public override void calculateArea()
+    {
+        Console.WriteLine("circle area equation: Area = pie*radius^2");
+    }
+
+}
+
+class Rectangle : Shape // rectangle equation
+{
+    public override void calculateArea()
+    {
+        Console.WriteLine("rectangle area equation: Area = length*width");
+    }
+
+}
+
+class Triangle : Shape // Triangle equation
+{
+    public override void calculateArea()
+    {
+        Console.WriteLine("triangle area equation: Area = 0.5*base*height");
+    }
+
+}
+
+class Prgram
+{
+    static void Main(string[] args);
+    {
+
+    Shape myShape = new Shape(); //solve the shape equations
+    Shape myCircle = new Circle(); //solve the circle equation
+    Shape myRectangle = new Rectangle(); //solve the rectangle equation
+    Shape myTriangle = new Triangle(); // sove the triangle equation
+
+    myShape.calculateArea();
+    myCircle.calculateArea();
+    myRectangle.calculateArea();
+    myTriangle.calculateArea();
+
+    }
+
+}
